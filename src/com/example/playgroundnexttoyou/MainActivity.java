@@ -1,7 +1,7 @@
 package com.example.playgroundnexttoyou;
 
 import android.support.v7.app.ActionBarActivity;
-import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -31,6 +31,12 @@ public class MainActivity extends ActionBarActivity {
         recherche.setOnClickListener(new OnClickListener() {
         	public void onClick(View v) {
         		recherche.setText("Lol, baisé!");
+        	}});
+        
+        ajout.setOnClickListener(new OnClickListener() {
+        	public void onClick(View v){
+        		Intent intent = new Intent(MainActivity.this, Formulaire.class);
+        		startActivity(intent);
         	}});
     }
 
